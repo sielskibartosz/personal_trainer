@@ -1,0 +1,50 @@
+.pricing-section {
+  position: relative;
+  padding: 80px 20px;
+  background: url('/images/pricing-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+
+.pricing-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* przyciemnienie tła */
+  z-index: 1;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 2; /* nad overlay */
+}
+
+.pricing-card {
+  background: rgba(26,26,26,0.9); /* lekko przezroczysta karta */
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+}
+
+.pricing-card h3 {
+  font-size: 20px;
+  color: #1e90ff;
+  margin-bottom: 15px;
+}
+
+.pricing-card .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}

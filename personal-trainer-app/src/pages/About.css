@@ -1,0 +1,32 @@
+.about-section {
+  position: relative;
+  padding: 80px 20px;
+  background: url('/images/about-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+
+.about-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background: rgba(26,26,26,0.85); /* lekko przyciemnione tło dla lepszej czytelności */
+  z-index: 1;
+}
+
+.about-text {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 26px;       /* większy tekst */
+  line-height: 2;        /* większa interlinia */
+  text-align: justify;   /* justowanie tekstu */
+  color: #f0f0f0;
+  font-weight: 500;      /* pogrubienie tekstu */
+}
+
+.about-text p {
+  margin-bottom: 25px;   /* większy odstęp między akapitami */
+}

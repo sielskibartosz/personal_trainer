@@ -41,6 +41,22 @@ Jeśli chcesz poprawić zdrowie, kondycję i sylwetkę — zapraszam! Dla chętn
     }
   },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
   en: {
     navbar: {
       about: "About Me",

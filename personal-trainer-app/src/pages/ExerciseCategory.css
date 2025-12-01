@@ -1,89 +1,42 @@
-.exercises-category-section {
+/* Exercises.css */
+.exercises-section {
   position: relative;
-  padding: 80px 20px;
+  padding: 60px 20px;
   background: url('/images/exercises-bg.jpg') center/cover no-repeat;
   color: #fff;
 }
 
-.exercises-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 1;
-}
-
-.exercise-category-container {
-  position: relative;
-  z-index: 2; /* nad overlayem */
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 20px;
+/* Przycisk powrotu */
+.back-button button {
+  background: none;
+  border: none;
   color: #1e90ff;
-  text-decoration: none;
+  font-size: 18px;
   font-weight: bold;
-}
-.back-link:hover {
-  text-decoration: underline;
-}
-
-.category-title {
-  font-size: 32px;
-  margin-bottom: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
 }
 
-.exercise-subgrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.back-button button:hover {
+  color: #0d6fc0;
 }
 
-.exercise-subcard {
-  background: rgba(26,26,26,0.85);
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s;
+/* Opis kategorii w ciemnym oknie */
+.category-description-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  border-radius: 12px;
+  background: rgba(26, 26, 26, 0.9); /* ciemne, lekko przezroczyste */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: justify;
 }
 
-.exercise-subcard:hover {
-  transform: translateY(-5px);
-}
-
-.exercise-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.exercise-subcard h4 {
-  color: #1e90ff;
-  margin: 10px 0 5px 0;
-}
-
-.exercise-subcard .difficulty {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.difficulty.łatwe { background-color: #3bb36b; color: #fff; }
-.difficulty.średnie { background-color: #f4c542; color: #000; }
-.difficulty.trudne { background-color: #ff4c4c; color: #fff; }
-
-.exercise-subcard p {
-  padding: 0 10px 15px 10px;
-  font-size: 14px;
-  line-height: 1.5;
+.category-description {
+  font-size: 16px;
+  line-height: 1.6;
   color: #fff;
 }

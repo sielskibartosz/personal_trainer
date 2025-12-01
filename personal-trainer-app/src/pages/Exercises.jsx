@@ -10,35 +10,23 @@ export default function Exercises() {
   const exerciseImages = [
     {
       src: "/images/ex1.jpg",
-      label: "Stretching",
-      details: [
-        {desc: "Rozciąganie szyi i karku." },
-
-      ],
+      label: t("exercises.stretching"),
+      
     },
     {
       src: "/images/ex2.jpg",
-      label: "Strength",
-      details: [
-        {desc: "Przysiady dla wzmocnienia nóg." },
-
-      ],
+      label: t("exercises.strength"),
+      
     },
     {
       src: "/images/ex3.jpg",
-      label: "Core",
-      details: [
-        {desc: "Deska dla mięśni brzucha." },
-
-      ],
+      label: t("exercises.core"),
+      
     },
     {
       src: "/images/ex4.jpg",
-      label: "Cardio",
-      details: [
-        { desc: "Skoki rozgrzewające całe ciało." },
-
-      ],
+      label:  t("exercises.cardio"),
+     
     },
   ];
 
@@ -50,7 +38,7 @@ export default function Exercises() {
 
   return (
     <Section id="exercises" title={t("exercises.title")} className="exercises-section">
-      <div className="exercises-overlay"></div>
+      
 
       <div className="exercise-grid">
         {exerciseImages.map((ex, index) => (

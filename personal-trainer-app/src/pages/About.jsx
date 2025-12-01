@@ -7,11 +7,37 @@ export default function About() {
 
   return (
     <Section id="about" title={t("about.title")} className="about-section">
-      <div className="about-overlay"></div>
-      <div className="about-text">
-        {t("about.text").split("\n\n").map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
+      <div className="about-container">
+
+        {/* LEWA STRONA – TEKST */}
+        <div className="about-left">
+          <h3 className="about-hook">
+            {t("about.hook")}
+          </h3>
+
+          <div className="about-text">
+            {t("about.text").split("\n\n").map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+
+          {/* LISTA WYRÓŻNIKÓW */}
+          <ul className="about-list">
+            <li>{t("about.highlight_1")}</li>
+            <li>{t("about.highlight_2")}</li>
+            <li>{t("about.highlight_3")}</li>
+          </ul>
+        </div>
+
+        {/* PRAWA STRONA – ZDJĘCIE */}
+        <div className="about-right">
+          <img
+            src="/images/trainer.jpg"
+            alt="Trener personalny"
+            className="about-photo"
+          />
+        </div>
+
       </div>
     </Section>
   );

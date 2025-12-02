@@ -1,20 +1,23 @@
+/* --- Navbar ogólny --- */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 8px 15px;
   background-color: #111;
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
+  font-size: 0.95rem;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
+/* --- Lista linków --- */
 .nav-links {
   display: flex;
   list-style: none;
@@ -29,8 +32,15 @@
   border: none;
   cursor: pointer;
   font-size: 1rem;
+  transition: color 0.2s ease;
 }
 
+.nav-links li a:hover,
+.nav-links li button:hover {
+  color: #1e90ff; /* kolor akcentu */
+}
+
+/* --- Dropdown językowy --- */
 .lang-dropdown {
   position: relative;
 }
@@ -46,6 +56,20 @@
   display: flex;
   flex-direction: column;
   min-width: 60px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 105;
+}
+
+.lang-dropdown:hover .dropdown,
+.lang-dropdown.open .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .lang-dropdown .dropdown li {
@@ -57,14 +81,15 @@
   background: #333;
 }
 
-/* Hamburger menu (mobile) */
+/* --- Hamburger menu (mobile) --- */
 .hamburger {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   cursor: pointer;
+  z-index: 110;
 }
 
-/* Mobile */
+/* --- Mobile --- */
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block;
@@ -72,15 +97,16 @@
 
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 50px; /* dopasowane do niższego navbaru */
     right: 0;
     background: #111;
     flex-direction: column;
-    width: 200px;
+    width: 180px;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     padding: 10px 0;
     gap: 0;
+    border-radius: 0 0 8px 8px;
   }
 
   .nav-links.open {
@@ -88,12 +114,16 @@
   }
 
   .nav-links li {
-    padding: 10px 20px;
+    padding: 8px 15px;
   }
 
   .lang-dropdown .dropdown {
     position: static;
     background: #222;
     margin-top: 5px;
+    box-shadow: none;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 }

@@ -3,7 +3,15 @@ export default function Section({ id, title, children, className }) {
     <section
       id={id}
       className={className}
-      style={{ padding: "100px 20px", maxWidth: "1100px", margin: "auto", position: "relative" }}
+      style={{
+        paddingTop: "60px", // mniejszy odstęp od navbaru
+        paddingBottom: "100px", // pozostawiam dolny padding taki jak wcześniej
+        paddingLeft: "20px",
+        paddingRight: "20px",
+        maxWidth: "1100px",
+        margin: "auto",
+        position: "relative"
+      }}
     >
       <h2
         style={{
@@ -19,7 +27,15 @@ export default function Section({ id, title, children, className }) {
         {title}
       </h2>
 
-      <div style={{ color: "#ccc", fontSize: "18px", lineHeight: "1.6", position: "relative", zIndex: 2 }}>
+      <div
+        style={{
+          color: "#ccc",
+          fontSize: "18px",
+          lineHeight: "1.6",
+          position: "relative",
+          zIndex: 2
+        }}
+      >
         {children}
       </div>
     </section>

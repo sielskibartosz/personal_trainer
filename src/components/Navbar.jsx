@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -7,9 +8,46 @@ export default function Navbar() {
   const [langOpen, setLangOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // mobilne menu
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Funkcja scroll do sekcji z offsetem dla sticky navbaru
+  const handleScrollTo = (id) => {
+    const scroll = () => {
+      const section = document.getElementById(id);
+      if (section) {
+        const yOffset = -60; // wysokość navbaru
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    };
+
+    if (location.pathname !== "/") {
+      navigate("/", { replace: false });
+      setTimeout(() => scroll(), 100);
+    } else {
+      scroll();
+    }
+
+    setMenuOpen(false); // zamyka menu mobilne po kliknięciu
+  };
+
+  // Kliknięcie w logo – przewija na samą górę
+  const handleLogoClick = () => {
+    if (location.pathname !== "/") {
+      navigate("/", { replace: false });
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setMenuOpen(false); // zamyka menu mobilne
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo">{t("navbar.title")}</div>
+      <div className="logo" onClick={handleLogoClick} style={{ cursor: "pointer" }}>
+        {t("navbar.title")}
+      </div>
 
       {/* Hamburger dla mobile */}
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -18,16 +56,24 @@ export default function Navbar() {
 
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li>
-          <a href="#about" onClick={() => setMenuOpen(false)}>{t("navbar.about")}</a>
+          <button onClick={() => handleScrollTo("about")}>
+            {t("navbar.about")}
+          </button>
         </li>
         <li>
-          <a href="#exercises" onClick={() => setMenuOpen(false)}>{t("navbar.exercises")}</a>
+          <button onClick={() => handleScrollTo("exercises")}>
+            {t("navbar.exercises")}
+          </button>
         </li>
         <li>
-          <a href="#pricing" onClick={() => setMenuOpen(false)}>{t("navbar.pricing")}</a>
+          <button onClick={() => handleScrollTo("pricing")}>
+            {t("navbar.pricing")}
+          </button>
         </li>
         <li>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>{t("navbar.contact")}</a>
+          <button onClick={() => handleScrollTo("contact")}>
+            {t("navbar.contact")}
+          </button>
         </li>
 
         {/* Dropdown językowy */}
@@ -37,8 +83,24 @@ export default function Navbar() {
           </button>
           {langOpen && (
             <ul className="dropdown">
-              <li onClick={() => { setLang("pl"); setLangOpen(false); setMenuOpen(false); }}>PL</li>
-              <li onClick={() => { setLang("en"); setLangOpen(false); setMenuOpen(false); }}>EN</li>
+              <li
+                onClick={() => {
+                  setLang("pl");
+                  setLangOpen(false);
+                  setMenuOpen(false);
+                }}
+              >
+                PL
+              </li>
+              <li
+                onClick={() => {
+                  setLang("en");
+                  setLangOpen(false);
+                  setMenuOpen(false);
+                }}
+              >
+                EN
+              </li>
             </ul>
           )}
         </li>

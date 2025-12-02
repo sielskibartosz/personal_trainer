@@ -14,17 +14,20 @@ function App() {
 
       <Routes>
         {/* Strona główna */}
-        <Route path="/" element={
-          <>
-            <About />
-            <Exercises />
-            <Pricing />
-            <Contact />
-          </>
-        } />
+        <Route
+          index
+          element={
+            <>
+              <About />
+              <Exercises />
+              <Pricing />
+              <Contact />
+            </>
+          }
+        />
 
-        {/* Podstrony z ćwiczeniami */}
-        <Route path="/exercises/:category" element={<ExerciseCategory />} />
+        {/* Podstrony ćwiczeń */}
+        <Route path="exercises/:category" element={<ExerciseCategory />} />
       </Routes>
     </LanguageProvider>
   );

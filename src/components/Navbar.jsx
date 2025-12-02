@@ -5,24 +5,29 @@ import "./Navbar.css";
 export default function Navbar() {
   const { t, lang, setLang } = useTranslation();
   const [langOpen, setLangOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // mobilne menu
 
   return (
     <nav className="navbar">
       <div className="logo">{t("navbar.title")}</div>
 
-      <ul className="nav-links">
-        {/* Linki do sekcji na stronie głównej */}
+      {/* Hamburger dla mobile */}
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </div>
+
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li>
-          <a href="#about">{t("navbar.about")}</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>{t("navbar.about")}</a>
         </li>
         <li>
-          <a href="#exercises">{t("navbar.exercises")}</a>
+          <a href="#exercises" onClick={() => setMenuOpen(false)}>{t("navbar.exercises")}</a>
         </li>
         <li>
-          <a href="#pricing">{t("navbar.pricing")}</a>
+          <a href="#pricing" onClick={() => setMenuOpen(false)}>{t("navbar.pricing")}</a>
         </li>
         <li>
-          <a href="#contact">{t("navbar.contact")}</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>{t("navbar.contact")}</a>
         </li>
 
         {/* Dropdown językowy */}
@@ -32,8 +37,8 @@ export default function Navbar() {
           </button>
           {langOpen && (
             <ul className="dropdown">
-              <li onClick={() => { setLang("pl"); setLangOpen(false); }}>PL</li>
-              <li onClick={() => { setLang("en"); setLangOpen(false); }}>EN</li>
+              <li onClick={() => { setLang("pl"); setLangOpen(false); setMenuOpen(false); }}>PL</li>
+              <li onClick={() => { setLang("en"); setLangOpen(false); setMenuOpen(false); }}>EN</li>
             </ul>
           )}
         </li>

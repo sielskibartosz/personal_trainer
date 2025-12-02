@@ -4,7 +4,7 @@ export default function Section({ id, title, children, className }) {
       id={id}
       className={className}
       style={{
-        paddingTop: "60px", // mniejszy odstęp od navbaru
+        paddingTop: "20px", // mniejszy odstęp od navbaru
         paddingBottom: "100px", // pozostawiam dolny padding taki jak wcześniej
         paddingLeft: "20px",
         paddingRight: "20px",

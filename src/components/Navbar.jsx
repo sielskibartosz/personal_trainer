@@ -33,25 +33,18 @@ export default function Navbar() {
 
       <ul className="nav-links">
         <li>
-          <button onClick={() => handleScrollTo("about")}>
-            {t("navbar.about")}
-          </button>
+          <a href="#about">{t("navbar.about")}</a>
         </li>
         <li>
-          <button onClick={() => handleScrollTo("exercises")}>
-            {t("navbar.exercises")}
-          </button>
+          <a href="#exercises">{t("navbar.exercises")}</a>
         </li>
         <li>
-          <button onClick={() => handleScrollTo("pricing")}>
-            {t("navbar.pricing")}
-          </button>
+          <a href="#pricing">{t("navbar.pricing")}</a>
         </li>
         <li>
-          <button onClick={() => handleScrollTo("contact")}>
-            {t("navbar.contact")}
-          </button>
+          <a href="#contact">{t("navbar.contact")}</a>
         </li>
+      </ul>
 
         <li className="lang-dropdown">
           <button onClick={() => setLangOpen(!langOpen)}>

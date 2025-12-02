@@ -23,7 +23,7 @@ function App() {
           </>
         } />
 
-        {/* Podstrona kategorii ćwiczeń */}
+        {/* Podstrony z ćwiczeniami */}
         <Route path="/exercises/:category" element={<ExerciseCategory />} />
       </Routes>
     </LanguageProvider>

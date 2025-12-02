@@ -9,10 +9,10 @@ export default function Exercises() {
 
   // Lista kategorii ćwiczeń
   const exerciseImages = [
-    { src: "/images/ex1.jpg", label: t("exercises.stretching"), key: "stretching" },
-    { src: "/images/ex2.jpg", label: t("exercises.strength"), key: "strength" },
-    { src: "/images/ex3.jpg", label: t("exercises.core"), key: "core" },
-    { src: "/images/ex4.jpg", label: t("exercises.cardio"), key: "cardio" },
+    { src: `${import.meta.env.BASE_URL}images/ex1.jpg`, label: t("exercises.stretching"), key: "stretching" },
+    { src: `${import.meta.env.BASE_URL}images/ex2.jpg`, label: t("exercises.strength"), key: "strength" },
+    {src: `${import.meta.env.BASE_URL}images/ex3.jpg`, label: t("exercises.core"), key: "core" },
+    {src: `${import.meta.env.BASE_URL}images/ex4.jpg`, label: t("exercises.cardio"), key: "cardio" },
   ];
 
   // Funkcja przejścia do podstrony kategorii

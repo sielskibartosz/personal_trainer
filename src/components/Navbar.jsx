@@ -1,24 +1,30 @@
 import React, { useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
   const { t, lang, setLang } = useTranslation();
   const [langOpen, setLangOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleScrollTo = (id) => {
-    // Najpierw wracamy na stronę główną
-    navigate("/");
+    // Jeśli nie jesteśmy na stronie głównej, najpierw przejdź
+    if (location.pathname !== "/") {
+      navigate("/", { replace: false });
+      // Poczekaj, aż DOM się załaduje
+      setTimeout(() => scrollToSection(id), 100);
+    } else {
+      scrollToSection(id);
+    }
+  };
 
-    // Mały timeout, żeby element był w DOM
-    setTimeout(() => {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

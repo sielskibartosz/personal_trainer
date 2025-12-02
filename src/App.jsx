@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Exercises from "./pages/Exercises";
@@ -10,23 +10,22 @@ import { LanguageProvider } from "./i18n/LanguageContext";
 function App() {
   return (
     <LanguageProvider>
-      <Router>
-        <Navbar />
+      <Navbar />
 
-        <Routes>
-          <Route path="/" element={
-            <>
-              <About />
-              <Exercises />
-              <Pricing />
-              <Contact />
-            </>
-          } />
+      <Routes>
+        {/* Strona główna */}
+        <Route path="/" element={
+          <>
+            <About />
+            <Exercises />
+            <Pricing />
+            <Contact />
+          </>
+        } />
 
-          {/* Podstrony z ćwiczeniami */}
-          <Route path="/exercises/:category" element={<ExerciseCategory />} />
-        </Routes>
-      </Router>
+        {/* Podstrona kategorii ćwiczeń */}
+        <Route path="/exercises/:category" element={<ExerciseCategory />} />
+      </Routes>
     </LanguageProvider>
   );
 }

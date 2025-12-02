@@ -12,7 +12,7 @@ const translations = {
       hook: "Sprawność · Zdrowie · Sylwetka",
       highlight_1: "Trenuję z Tobą",
       highlight_2: "Uczę wzorców ruchowych i techniki",
-      highlight_3: "Stawiam na zdrową, trwałą sprawność, a nie szybkie efekty",
+      highlight_3: "Stawiam na zdrowie, sprawność, a nie szybkie efekty",
       text: `Prowadzę treningi personalne ukierunkowane na poprawę ogólnej sprawności, kondycji i samopoczucia. Specjalizuję się w treningach siłowych, funkcjonalnych i motorycznych.
 
 Podczas zajęć nie tylko ćwiczymy — uczę również, jak samodzielnie planować treningi, rozumieć wzorce ruchowe i bezpiecznie korzystać z siłowni. Dzięki temu zyskasz wiedzę i pewność, by trenować skutecznie także na własną rękę.
@@ -21,32 +21,32 @@ Jeśli chcesz poprawić zdrowie, kondycję i sylwetkę — zapraszam! Dla chętn
     },
     exercises: {
       title: "Ćwiczenia",
-      stretching: "Stretching",
+      stretching: "Rozciąganie",
       strength: "Siła",
       core: "Stabilizacja",
       cardio: "Wytrzymałość"
     },
     back: "Wróć",
     categoryDescriptions: {
-      stretching: `Stretching to nieodłączna część każdego mojego treningu i jest dla niezwykle ważny. 
-Pomaga rozluźnić napięte mięśnie, redukuje stres mięśniowy, wspiera relaksację i poprawia zakres ruchu w stawach. 
-Dzięki regularnemu rozciąganiu zwiększamy świadomość własnego ciała i kształtujemy prawidłową postawę. 
-Szczególnie dbam o to u osób pracujących długo przy biurku, dla których jest to niezastąpiony element treningu, wspierający zarówno zdrowie, jak i komfort codziennego funkcjonowania.`,
+      stretching: `Rozciąganie to nieodłączny element każdego mojego treningu.
+Pomaga rozluźnić napięte mięśnie, zmniejsza napięcie mięśniowe, wspiera relaksację i poprawia zakres ruchu w stawach.
+Dzięki regularnemu rozciąganiu zwiększamy świadomość własnego ciała i kształtujemy prawidłową postawę.
+Szczególną uwagę przykładam do tego aspektu u osób pracujących długo przy biurku – 
+dla nich jest to niezastąpiony element treningu, wspierający zarówno zdrowie, jak i komfort codziennego funkcjonowania.`,
 
       strength: `Regularne ćwiczenia siłowe wzmacniają mięśnie, kości i stawy, wspierają metabolizm oraz pomagają w utrzymaniu prawidłowej masy ciała. 
 Silne i proporcjonalnie rozwinięte mięśnie zwiększają stabilność i pewność siebie podczas codziennych czynności.
 Szczególna uwaga należy się mięśniom nóg, ponieważ ich wzmocnienie wspiera cały organizm, 
 poprawia równowagę, stabilność oraz ułatwia ruchy dnia codziennego, takie jak chodzenie, bieganie czy wchodzenie po schodach.
-Trening siłowy w moich zajęciach obejmuje całe ciało – nie faworyzuję żadnej partii mięśniowej, 
+Trening siłowy w moich zajęciach obejmuje całe ciało - nie faworyzuję żadnej partii mięśniowej, 
 ponieważ dysproporcje mogą prowadzić do wad postawy i zwiększać ryzyko kontuzji. `,
 
       core: `Trening mięśni core, czyli głębokich mięśni brzucha i pleców, jest kluczowy dla stabilności całego ciała. 
 Silny core, a w szczególności mocny brzuch, wspiera zdrowy kręgosłup, poprawia równowagę i koordynację, 
-a także zwiększa efektywność w ćwiczeniach wielostawowych, takich jak przysiady, martwy ciąg czy pompki. 
+a także zwiększa efektywność w ćwiczeniach wielostawowych, takich jak przysiady czy martwy ciąg. 
 Ćwiczenia core pomagają wykonywać codzienne ruchy sprawniej i bez ryzyka kontuzji. 
 Są polecane także dzieciom i młodzieży, ponieważ wspierają rozwój prawidłowej postawy, 
 wzmacniają mięśnie stabilizujące kręgosłup i poprawiają koordynację ruchową. 
-Regularne wzmacnianie core od najmłodszych lat sprzyja zdrowemu rozwojowi fizycznemu i zapobiega problemom z plecami w przyszłości.
 Na moich treningach korzystamy z gum oporowych, piłek fitness oraz innych akcesoriów, które świetnie wspomagają pracę nad mięśniami głębokimi.`,
 
       cardio: `Ćwiczenia takie jak bieganie, taniec, jazda na rowerze czy skakanka, zwiększają wydolność serca i płuc, 
@@ -115,7 +115,7 @@ A strong core, especially a strong abdomen, supports a healthy spine, improves b
 and increases efficiency in compound exercises such as squats, deadlifts, and push-ups. 
 Core exercises help perform daily movements more safely and effectively. 
 They are also recommended for children and teenagers, supporting proper posture, strengthening stabilizing muscles, and improving movement coordination. 
-Regular core strengthening from an early age promotes healthy physical development and prevents future back problems.`,
+In my training sessions, we use resistance bands, fitness balls, and other accessories that effectively aid in working on deep muscles.`,
 
       cardio: `Exercises like running, dancing, cycling, or skipping rope increase cardiovascular and lung capacity, 
 support calorie burning, and improve physical fitness. 

@@ -1,37 +1,17 @@
 import React, { useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
-import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
   const { t, lang, setLang } = useTranslation();
   const [langOpen, setLangOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleScrollTo = (id) => {
-    // Jeśli nie jesteśmy na stronie głównej, najpierw przejdź
-    if (location.pathname !== "/") {
-      navigate("/", { replace: false });
-      // Poczekaj, aż DOM się załaduje
-      setTimeout(() => scrollToSection(id), 100);
-    } else {
-      scrollToSection(id);
-    }
-  };
-
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <nav className="navbar">
       <div className="logo">{t("navbar.title")}</div>
 
       <ul className="nav-links">
+        {/* Linki do sekcji na stronie głównej */}
         <li>
           <a href="#about">{t("navbar.about")}</a>
         </li>
@@ -44,8 +24,8 @@ export default function Navbar() {
         <li>
           <a href="#contact">{t("navbar.contact")}</a>
         </li>
-      </ul>
 
+        {/* Dropdown językowy */}
         <li className="lang-dropdown">
           <button onClick={() => setLangOpen(!langOpen)}>
             {lang.toUpperCase()} ▼

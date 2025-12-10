@@ -32,7 +32,7 @@ export default function About() {
         {/* PRAWA STRONA – ZDJĘCIE */}
         <div className="about-right">
           <img
-             src={`${import.meta.env.BASE_URL}images/trainer.jpg`}  // poprawnie odwołanie do folderu public
+             src={`${import.meta.env.BASE_URL}images/trainer.jpeg`}  // poprawnie odwołanie do folderu public
             alt="Trener personalny"
             className="about-photo"
           />

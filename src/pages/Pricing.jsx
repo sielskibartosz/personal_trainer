@@ -6,7 +6,7 @@ export default function Pricing() {
   const { t } = useTranslation();
 
   const pricingOptions = [
-    { title: t("pricing.first"), price: "50 zł" },
+    { title: t("pricing.first"), price: "0 zł" },
     { title: t("pricing.one"), price: "100 zł" },
      { title: t("pricing.pair"), price: "100 zł" },
     { title: t("pricing.pack"), price: "800 zł" }

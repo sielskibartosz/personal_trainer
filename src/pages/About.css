@@ -39,19 +39,25 @@
   margin-bottom: 18px;
 }
 
+/* LISTA */
 .about-list {
   list-style: none;
-  padding: 0;
+  padding-left: 35px; /* zwiększone miejsce na checkmark */
   margin-top: 20px;
+  text-align: left; /* wymusza wyrównanie do lewej */
 }
 
 .about-list li {
-  font-size: 19px;
+  position: relative;
   margin-bottom: 12px;
+  font-size: 1.1rem;
   display: list-item;
-  align-items: center;
-  gap: 8px;
+  text-align: left;
+  line-height: 1.4em; /* dla lepszego wyrównania pionowego */
 }
+
+
+
 
 /* PRAWA STRONA – ZDJĘCIE */
 .about-right {

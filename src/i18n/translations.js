@@ -13,6 +13,7 @@ const translations = {
       highlight_1: "Trenuję razem z Tobą",
       highlight_2: "Uczę techniki i prawidłowych wzorców ruchu",
       highlight_3: "Stawiam na zdrowie, sprawność i trwałe efekty",
+      highlight_4: "Prowadzę również treningi w Twoim domu - zarowno dla dzieci w wieku szkolnym, jak i dorosłych",
       text: `Prowadzę treningi personalne nastawione na poprawę ogólnej sprawności, kondycji i samopoczucia. Specjalizuję się w treningu siłowym, funkcjonalnym oraz motorycznym.
 
 Podczas zajęć nie tylko ćwiczymy — uczę także, jak samodzielnie planować treningi, rozumieć wzorce ruchowe i bezpiecznie korzystać z siłowni. Dzięki temu zyskasz pewność i wiedzę, by trenować skutecznie również na własną rękę.
@@ -53,7 +54,8 @@ Dla chętnych organizuję wyjazdy w góry, rowerowe lub inne aktywności, które
       one: "Trening personalny",
       pack: "Pakiet 10 treningów",
       first: "Pierwszy trening",
-      pair: "Trening w parze"
+      pair: "Trening w parze",
+      kids: "Trening dla dzieci w wieku szkolnym w domu"
     },
     contact: {
       title: "Kontakt",
@@ -76,6 +78,7 @@ Dla chętnych organizuję wyjazdy w góry, rowerowe lub inne aktywności, które
       highlight_1: "I train together with you",
       highlight_2: "I teach proper movement patterns and technique",
       highlight_3: "I focus on health, long-term progress, and sustainable results",
+      highlight_4: "I also offer home training sessions for both school-age children and adults",
       text: `I provide personal training focused on developing overall fitness, strength, and well-being. I specialize in strength, functional, and athletic training.
 
 During sessions, we do more than just exercise — I teach you how to plan your own workouts, understand movement patterns, and train safely and effectively on your own. This gives you confidence and independence in the gym.
@@ -115,7 +118,8 @@ For those interested, I organize mountain trips, cycling tours, and other activi
       one: "Personal training",
       pack: "10-session package",
       first: "First session",
-      pair: "Training for two"
+      pair: "Training for two",
+      kids: "Training for school-age kids at home"
     },
     contact: {
       title: "Contact",

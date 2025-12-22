@@ -26,6 +26,7 @@ export default function About() {
             <li>{t("about.highlight_1")}</li>
             <li>{t("about.highlight_2")}</li>
             <li>{t("about.highlight_3")}</li>
+            <li>{t("about.highlight_4")}</li>
           </ul>
         </div>
 

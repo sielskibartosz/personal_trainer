@@ -48,7 +48,7 @@
 .about-list li {
   font-size: 19px;
   margin-bottom: 12px;
-  display: flex;
+  display: list-item;
   align-items: center;
   gap: 8px;
 }

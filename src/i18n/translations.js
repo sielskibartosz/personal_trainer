@@ -14,7 +14,7 @@ const translations = {
       highlight_2: "Uczę techniki i prawidłowych wzorców ruchu",
       highlight_3: "Stawiam na zdrowie, sprawność i trwałe efekty",
       highlight_4: "Prowadzę również treningi w Twoim domu - zarówno dla dzieci w wieku szkolnym, jak i dorosłych",
-      text: `Prowadzę treningi personalne nastawione na poprawę ogólnej sprawności, kondycji i samopoczucia. Specjalizuję się w treningu siłowym, funkcjonalnym oraz motorycznym.
+      text: `Prowadzę treningi personalne budujące sprawność całego ciała, koordynację i siłę. Dla tych, którzy chcą czerpać radość z aktywności fizycznej.
 
 Podczas zajęć nie tylko ćwiczymy — uczę także, jak samodzielnie planować treningi, rozumieć wzorce ruchowe i bezpiecznie korzystać z siłowni. Dzięki temu zyskasz pewność i wiedzę, by trenować skutecznie również na własną rękę.
 

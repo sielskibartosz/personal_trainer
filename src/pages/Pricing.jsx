@@ -7,9 +7,9 @@ export default function Pricing() {
 
   const pricingOptions = [
     { title: t("pricing.first"), price: "0 zł" },
-    { title: t("pricing.one"), price: "100 zł" },
-     { title: t("pricing.pair"), price: "100 zł" },
-    { title: t("pricing.pack"), price: "800 zł" }
+    { title: t("pricing.one"), price: "70 zł" },
+     { title: t("pricing.pair"), price: "70 zł" },
+    { title: t("pricing.pack"), price: "600 zł" }
    
   ];
 
